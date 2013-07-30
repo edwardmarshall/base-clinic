@@ -3,6 +3,7 @@ BaseClinic::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  post 'pitch_signup' => 'pages#pitch_signup'
   root 'pages#pitch'
 
   # Example of regular route:

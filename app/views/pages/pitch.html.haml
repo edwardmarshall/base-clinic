@@ -12,13 +12,13 @@
 
 .email
   %p
-    Enter your email and get exclusive research on hearing 
+    Enter your email and get exclusive research on hearing
     %br
     industries best practices before the software is out.
   %p
-    %form
-      %input
-      %input.btn.btn-primary(type="submit" value="Keep me posted!")
+    = form_tag(pitch_signup_path) do
+      = email_field_tag 'user[email]', '', :class => 'email-address'
+      = submit_tag "Keep me posted!", :class => 'btn btn-primary'
 
 .container
   .stories.row
@@ -76,3 +76,14 @@
       %p Business owners, hearing professionals, future friends in the Industry, etc. Interested in helping spread the BaseClinic word? We'd love to hear from you! Have other partnership opportunities or ideas? Don't hesitate to reach out!
       %p
         %a hi@baseclinic.com
+
+.modal.fade.hide
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+        %h4.modal-title Got it!
+      .modal-body
+        %p Keep your eyes peeled for something in your inbox.
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
