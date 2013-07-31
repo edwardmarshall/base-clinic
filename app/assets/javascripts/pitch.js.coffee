@@ -1,4 +1,5 @@
 $ ->
+  return unless window.location.pathname == '/'
   $('form').on 'submit', (e)->
     $.ajax
       type: 'POST'

@@ -1,0 +1,56 @@
+@import colors
+
+html, body
+  height: 100%
+
+body
+  background-color: $gray
+.navbar
+  background-color: white
+
+.full-height
+  height: 100%
+
+.full-width
+  width: 100%
+
+.main
+  background-color: white
+  border: solid 1px #c1c1c1
+
+.btn-default
+  background-color: white
+  color: #5587ad
+  border-color: $button-blue
+  &:hover
+    background-color: #619bc6
+    color: white
+    border-color: $button-blue
+  &.active
+    background-color: $button-blue
+    color: white
+    border-color: $button-blue
+
+
+.btn-group > .btn
+  border-left: none
+.btn-group > .btn:first-child
+  border-left: solid 1px #5587ad
+
+.nav > li > a
+  padding: 10px 0px
+  color: black
+
+.nav > li > a:hover, .nav > li > a:focus
+  background-color: $hover-gray
+
+.sidebar-col
+  padding: 10px 0 10px 10px
+
+.sidebar-nav
+  ul.nav.nav-list
+    margin-bottom: 40px
+    .nav-header
+      text-transform: uppercase
+      font-size: 12px
+      color: #a3a6a6

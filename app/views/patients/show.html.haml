@@ -1,0 +1,93 @@
+- if notice
+  %p#notice= notice
+
+.row.full-height
+  .col-9
+    %h3= "Patients / #{@patient.full_name}"
+
+    .btn-group
+      %button.btn.btn-default.active Notes
+      %button.btn.btn-default Test Results
+      %button.btn.btn-default Transaction History
+      %button.btn.btn-default Progress
+
+  .col-3.rail.flatten
+    %section.appointment
+      %button.btn.btn-default.full-width Start a new appointment
+      .text-center
+        %i.icon-user.user
+      .full-name= @patient.full_name
+      .email-address= @patient.email_address
+      .phone-number= @patient.phone_number
+
+      %a.pull-left(href="#")
+        Show details
+        %i.icon-caret-down
+      = link_to 'Update details', edit_patient_path(@patient), :class => 'pull-right'
+      .clearfix
+
+    %section.tasks.curved-border
+      .header
+        .pull-left
+          %i.icon-check
+          Tasks
+        .pull-right
+          %a(href='#') + Add a task
+        .clearfix
+      Today
+      %table
+        %tr
+          %td
+            %input(type="checkbox")
+          %td Hearing aids
+        %tr
+          %td
+            %input(type="checkbox")
+          %td Find out the doctors information that Pt will be seeing. Good networking opportunity. (Re: Note)
+      %a(href="#") Completed Tasks (4)
+
+    %section.documents.curved-border
+      .header
+        .pull-left
+          %i.icon-file
+          Documents
+        .pull-right
+          %a(href='#') + Add a doc
+        .clearfix
+      %ul.list-unstyled
+        %li
+          %a(href="#")
+            %i.icon-pencil
+            Intake forms (2)
+        %li
+          %a(href="#")
+            %i.icon-pencil
+            Waivers (3)
+        %li
+          %a(href="#")
+            %i.icon-volume-up
+            Audiograms (1)
+        %li
+          %a(href="#")
+            %i.icon-dollar
+            Purchase Agreements (1)
+        %li
+          %a(href="#")
+            %i.icon-check
+            Delivery Checklist (1)
+        %li
+          %a(href="#")
+            %i.icon-calendar
+            SOAP appt summaries (13)
+        %li
+          %a(href="#")
+            %i.icon-pencil
+            All notes (47)
+        %li
+          %a(href="#")
+            %i.icon-wrench
+            Repair forms (6)
+        %li
+          %a(href="#")
+            %i.icon-pencil
+            Return for credit (0)

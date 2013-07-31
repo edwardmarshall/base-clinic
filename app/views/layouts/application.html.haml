@@ -18,34 +18,30 @@
 
 
   %body
-    .navbar.navbar-fixed-top
-      .navbar-inner
-        .container
-          %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a.brand(href="#") BaseClinic
-          .container.nav-collapse
-            %ul.nav
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
+    .navbar
+      .container
+        %a.navbar-brand{:href => "#"} BaseClinic
+        %ul.pull-right.navbar-text.list-inline
+          %li
+            %a(href="#")
+              %i.icon-search
+              Search
+          %li
+            %a(href="#")
+              %i.icon-question-sign
+              Need Help?
+          %li
+            %a(href="#")
+              Travis Topham (HIS)
+              %i.icon-caret-down
 
-    .container
-
-      .row
-        .span9
+    .container.full-height
+      .row.full-height
+        .col-2.sidebar-col
+          = render 'shared/sidebar'
+        .col-10.main.full-height
           = bootstrap_flash
           = yield
-        .span3
-          .well.sidebar-nav
-            %h3 Sidebar
-            %ul.nav.nav-list
-              %li.nav-header Sidebar
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
 
       %footer
         %p &copy; Company 2013

@@ -1,0 +1,39 @@
+.sidebar-nav
+  %ul.nav.nav-list
+    %li.nav-header Your Practice
+    %li
+      = link_to(root_path) do
+        %i.icon-home
+        Dashboard
+    %li
+      %a(href="/")
+        %i.icon-building
+        Clinics (0)
+    %li
+      = link_to(patients_path) do
+        %i.icon-user
+        Patients (0)
+    %li
+      %a(href="/")
+        %i.icon-calendar
+        Schedule (0)
+    %li
+      %a(href="/")
+        %i.icon-check
+        Tasks (0)
+  %ul.nav.nav-list
+    %li.nav-header Your Reports
+    %li
+      %a(href="/")
+        %i.icon-dollar
+        Sales
+    %li
+      %a(href="/")
+        %i.icon-calendar-empty
+        Appointments
+  %ul.nav.nav-list
+    %li.nav-header Configuration
+    %li
+      %a(href="/")
+        %i.icon-gear
+        Settings

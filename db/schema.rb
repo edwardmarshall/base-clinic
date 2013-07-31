@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130730041302) do
+ActiveRecord::Schema.define(version: 20130731031118) do
+
+  create_table "patients", force: true do |t|
+    t.string   "handle"
+    t.string   "password"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email_address"
+    t.string   "phone_number"
+    t.string   "credentials"
+    t.string   "license_number"
+    t.string   "avatar"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "pitch_users", force: true do |t|
     t.string   "email"
